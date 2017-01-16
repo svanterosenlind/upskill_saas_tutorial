@@ -15,8 +15,18 @@
  */
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-
+body {
+    //Gradient "moss" from uiGradients.com 
+    background: #134E5E; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #134E5E , #71B280); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.navbar {
+    border:none;
+    background: #202A6B;
+}
  
 h1, h2, h3 {
     font-family: 'Lato', sans-serif;
+    
 }
