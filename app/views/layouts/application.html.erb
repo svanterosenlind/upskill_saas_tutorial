@@ -19,14 +19,20 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Agricultural Ministers Mingle</a>
+        <%= link_to root_path, class:"navbar-brand" do %>
+          <i class="fa fa-trash fa-spin"></i> Agricultural Ministers Mingle
+        <% end %>
+              
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <!-- Två länkar med html-sättet att länka
+          <li><a href="#" class="navbar-link">Link</a></li>
+          <li><a href="#" class="navbar-link">Link</a></li>
+          -->
+          
           <!--Below is the code for a dropdown taken straight from the bootstrap components tap, but it is not working on any browser. 
           <li class="dropdown">
             <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TODO <span class="caret"></span></a>
@@ -44,15 +50,25 @@
           </li>
           -->
         </ul>
+        <!-- Search form
           <form class="navbar-form navbar-left">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
+          -->
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/about">About</a></li>
+          <li>
+              <%= link_to about_path, class:"navbar-link" do %>
+                About
+              <% end %>
+          </li>
+          
+          <!--Betonad länk
           <li class="active"><a href="#" >Important <span class="sr-only">(current)</span></a></li>
+          -->
+          
           <!--This is a dropdown, but it is not working on any browser.
           <li class="dropdown">
             <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -69,8 +85,6 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-    <div class="container">
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>

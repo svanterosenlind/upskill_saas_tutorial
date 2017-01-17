@@ -15,18 +15,30 @@
  */
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-body {
-    //Gradient "moss" from uiGradients.com 
-    background: #134E5E; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #134E5E , #71B280); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #134E5E , #71B280); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body, .navbar {
+    background: #260851; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #260851 , #531F9E); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #260851 , #531F9E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 .navbar {
     border:none;
-    background: #202A6B;
 }
- 
+.navbar-default .navbar-nav li .navbar-link,
+.navbar-default .navbar-brand {
+    color: white;
+    &:hover {
+        color: white;
+    opacity: 0.75;
+    }
+}
+
 h1, h2, h3 {
     font-family: 'Lato', sans-serif;
+    color: white;
     
 }
