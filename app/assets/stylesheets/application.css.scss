@@ -24,6 +24,21 @@ body, .navbar {
     background: -webkit-linear-gradient(to left, #260851 , #531F9E); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #260851 , #531F9E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+.navbar-brand {
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+}
+//Used for the button that appears on in the navbar on smaller screens, such as mobile devices.
+.navbar-default .navbar-toggle {
+    border: 2px solid white;
+    &.icon-bar {
+  background-color: white;
+    }
+    &:hover, :focus {
+        background-color: #531F9E;
+    }
+}
+
 
 .navbar {
     border:none;
